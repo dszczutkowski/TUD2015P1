@@ -7,6 +7,11 @@ public class Klient
 	private double doZaplaty;
 	private boolean wino;
 	
+	public Klient()
+	{
+		
+	}
+	
 	public Klient(int nrStolika, double doZaplaty, boolean wino)
 	{
 		this.nrStolika = nrStolika;

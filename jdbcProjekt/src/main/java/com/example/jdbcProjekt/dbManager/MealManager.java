@@ -1,5 +1,5 @@
 package com.example.jdbcProjekt.dbManager;
 
-public class DanieManager {
+public class MealManager {
 
 }

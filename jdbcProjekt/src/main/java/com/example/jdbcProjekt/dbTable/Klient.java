@@ -19,12 +19,12 @@ public class Klient
 		this.wino = wino;
 	}
 	
-	public long getId()
+	public long getIdKlient()
 	{
 		return idKlient;
 	}
 	
-	public void setId(long idKlient)
+	public void setIdKlient(long idKlient)
 	{
 		this.idKlient = idKlient;
 	}

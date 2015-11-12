@@ -3,6 +3,7 @@ package com.example.jdbcProjekt.dbTable;
 public class Meal
 {
 	private long idMeal;
+	private long idClient;
 	private String name;
 	private int amount;
 	private double price;
@@ -27,6 +28,16 @@ public class Meal
 	public void setIdMeal(long idMeal)
 	{
 		this.idMeal = idMeal;
+	}
+
+	public long getIdClient()
+	{
+		return idClient;
+	}
+	
+	public void setIdClient(long idClient)
+	{
+		this.idClient = idClient;
 	}
 	
 	public String getName()

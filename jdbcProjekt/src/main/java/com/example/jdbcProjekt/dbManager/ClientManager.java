@@ -66,7 +66,7 @@ public class ClientManager
 		
 	}
 
-	Connection getConnection()
+	public Connection getConnection()
 	{
 		return connection;
 	}
@@ -87,7 +87,7 @@ public class ClientManager
 		return 0;
 	}
 	
-	int removeOneClient(Client idClient)
+	public int removeOneClient(Client idClient)
 	{
 		int count = 0;
 		try
@@ -101,7 +101,7 @@ public class ClientManager
 		return count;
 	}
 	
-	void removeClients() throws SQLException
+	public void removeClients() throws SQLException
 	{
 		try
 		{
@@ -117,7 +117,7 @@ public class ClientManager
 		}
 	}
 	
-	void updateClients(boolean wine, double payment) throws SQLException
+	public void updateClients(boolean wine, double payment) throws SQLException
 	{
 		int records = getCount();
 		List<Client>idClient = getAllClients();

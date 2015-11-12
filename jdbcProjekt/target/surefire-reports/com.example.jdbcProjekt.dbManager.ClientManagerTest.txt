@@ -1,12 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: com.example.jdbcProjekt.dbManager.ClientManagerTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.815 sec <<< FAILURE!
-checkUpdate(com.example.jdbcProjekt.dbManager.ClientManagerTest)  Time elapsed: 0.008 sec  <<< ERROR!
+Tests run: 5, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.731 sec <<< FAILURE!
+checkUpdate(com.example.jdbcProjekt.dbManager.ClientManagerTest)  Time elapsed: 0.013 sec  <<< ERROR!
 java.lang.NullPointerException
-	at com.example.jdbcProjekt.dbManager.ClientManager.getCount(ClientManager.java:78)
-	at com.example.jdbcProjekt.dbManager.ClientManager.updateClients(ClientManager.java:122)
-	at com.example.jdbcProjekt.dbManager.ClientManagerTest.checkUpdate(ClientManagerTest.java:72)
+	at com.example.jdbcProjekt.dbManager.ClientManager.removeClients(ClientManager.java:110)
+	at com.example.jdbcProjekt.dbManager.ClientManagerTest.checkUpdate(ClientManagerTest.java:66)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -39,8 +38,8 @@ java.lang.NullPointerException
 
 checkCounting(com.example.jdbcProjekt.dbManager.ClientManagerTest)  Time elapsed: 0.001 sec  <<< ERROR!
 java.lang.NullPointerException
-	at com.example.jdbcProjekt.dbManager.ClientManager.getCount(ClientManager.java:78)
-	at com.example.jdbcProjekt.dbManager.ClientManagerTest.checkCounting(ClientManagerTest.java:93)
+	at com.example.jdbcProjekt.dbManager.ClientManager.removeClients(ClientManager.java:110)
+	at com.example.jdbcProjekt.dbManager.ClientManagerTest.checkCounting(ClientManagerTest.java:84)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -73,8 +72,8 @@ java.lang.NullPointerException
 
 checkAdding(com.example.jdbcProjekt.dbManager.ClientManagerTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException
-	at com.example.jdbcProjekt.dbManager.ClientManager.getAllClients(ClientManager.java:169)
-	at com.example.jdbcProjekt.dbManager.ClientManagerTest.checkAdding(ClientManagerTest.java:44)
+	at com.example.jdbcProjekt.dbManager.ClientManager.removeClients(ClientManager.java:110)
+	at com.example.jdbcProjekt.dbManager.ClientManagerTest.checkAdding(ClientManagerTest.java:41)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -107,8 +106,8 @@ java.lang.NullPointerException
 
 checkRemoveOneClient(com.example.jdbcProjekt.dbManager.ClientManagerTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException
-	at com.example.jdbcProjekt.dbManager.ClientManager.removeOneClient(ClientManager.java:95)
-	at com.example.jdbcProjekt.dbManager.ClientManagerTest.checkRemoveOneClient(ClientManagerTest.java:60)
+	at com.example.jdbcProjekt.dbManager.ClientManager.removeClients(ClientManager.java:110)
+	at com.example.jdbcProjekt.dbManager.ClientManagerTest.checkRemoveOneClient(ClientManagerTest.java:57)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

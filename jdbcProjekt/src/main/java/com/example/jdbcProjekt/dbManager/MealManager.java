@@ -31,14 +31,16 @@ public class MealManager
 	
 	public MealManager()
 	{
-		try {
+		try 
+		{
 			connection = DriverManager.getConnection(url);
 			statement = connection.createStatement();
 
 			ResultSet rs = connection.getMetaData().getTables(null, null, null, null);
 			boolean tableExists = false;
 			boolean firstTableExists = false;
-			while (rs.next()) {
+			while (rs.next()) 
+			{
 				if ("Meal".equalsIgnoreCase(rs.getString("TABLE_NAME"))) {
 					tableExists = true;
 					break;
@@ -75,13 +77,15 @@ public class MealManager
 		return connection;
 	}
 	
-	public List<Meal> getAllOrders() {
-		List<Meal> meals = new ArrayList<Meal>();
+	public List<Meal>getAllOrders() {
+		List<Meal>meals = new ArrayList<Meal>();
 
-		try {
+		try 
+		{
 			ResultSet rs = getAllMealsStmt.executeQuery();
 
-			while (rs.next()) {
+			while (rs.next()) 
+			{
 				Meal meal = new Meal();
 				meal.setIdMeal(rs.getInt("idMeal"));
 				meal.setIdClient(rs.getLong("idClient"));

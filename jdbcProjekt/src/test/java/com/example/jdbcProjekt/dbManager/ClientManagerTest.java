@@ -36,16 +36,16 @@ public class ClientManagerTest {
 	@Test
 	public void checkAdding() throws SQLException
 	{
-		Client Client = new Client(SEAT_1, PAYMENT_1, WINE_1);
+		Client client = new Client(SEAT_1, PAYMENT_1, WINE_1);
 		
 		clientManager.removeClients();
-		assertEquals(1,clientManager.addClient(Client));
+		assertEquals(1, clientManager.addClient(client));
 		
-		List<Client>idClient = clientManager.getAllClients();
-		Client idClientRetrieved = idClient.get(0);
+		List<Client>clients = clientManager.getAllClients();
+		Client idClientRetrieved = clients.get(0);
 		
 		assertEquals(SEAT_1, idClientRetrieved.getSeatNumber());
-		assertEquals(PAYMENT_1, PAYMENT_1, idClientRetrieved.getPayment());
+		assertEquals(PAYMENT_1, 1, idClientRetrieved.getPayment());
 		assertEquals(WINE_1, idClientRetrieved.getWine());
 	}
 	
@@ -53,7 +53,7 @@ public class ClientManagerTest {
 	public void checkRemoveOneClient() throws SQLException
 	{
 		Client client = new Client(SEAT_1, PAYMENT_1, WINE_1);
-		
+	
 		clientManager.removeClients();
 		
 		assertEquals(1, clientManager.addClient(client));

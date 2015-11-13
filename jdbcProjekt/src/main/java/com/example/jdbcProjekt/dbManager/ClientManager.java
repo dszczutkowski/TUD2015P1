@@ -49,7 +49,7 @@ public class ClientManager
 			addClientStmt = connection
 					.prepareStatement("INSERT INTO Client (seatNumber, payment, wine) VALUES (?, ?, ?)");
 			updateClientsStmt = connection
-					.prepareStatement("UPDATE Client SET wine = ? WHERE payment > ?");
+					.prepareStatement("UPDATE Client SET wine = ? WHERE payment > ? AND idClient = ?");
 			deleteOneClientStmt = connection
 					.prepareStatement("DELETE FROM Client WHERE idClient = ?");
 			deleteAllClientsStmt = connection

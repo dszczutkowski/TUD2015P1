@@ -1,17 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: com.example.jdbcProjekt.dbManager.ClientManagerTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.792 sec <<< FAILURE!
-checkUpdate(com.example.jdbcProjekt.dbManager.ClientManagerTest)  Time elapsed: 0.027 sec  <<< ERROR!
-java.sql.SQLException: Invalid argument in JDBC call: parameter index out of range: 3
-	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
-	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
-	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
-	at org.hsqldb.jdbc.Util.outOfRangeArgument(Unknown Source)
-	at org.hsqldb.jdbc.JDBCPreparedStatement.checkSetParameterIndex(Unknown Source)
-	at org.hsqldb.jdbc.JDBCPreparedStatement.setLong(Unknown Source)
-	at com.example.jdbcProjekt.dbManager.ClientManager.updateClients(ClientManager.java:133)
-	at com.example.jdbcProjekt.dbManager.ClientManagerTest.checkUpdate(ClientManagerTest.java:72)
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.821 sec <<< FAILURE!
+checkUpdate(com.example.jdbcProjekt.dbManager.ClientManagerTest)  Time elapsed: 0.054 sec  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:92)
+	at org.junit.Assert.assertTrue(Assert.java:43)
+	at org.junit.Assert.assertTrue(Assert.java:54)
+	at com.example.jdbcProjekt.dbManager.ClientManagerTest.checkUpdate(ClientManagerTest.java:77)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -41,8 +37,4 @@ java.sql.SQLException: Invalid argument in JDBC call: parameter index out of ran
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-Caused by: org.hsqldb.HsqlException: Invalid argument in JDBC call: parameter index out of range: 3
-	at org.hsqldb.error.Error.error(Unknown Source)
-	at org.hsqldb.error.Error.error(Unknown Source)
-	... 35 more
 

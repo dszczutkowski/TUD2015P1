@@ -53,7 +53,7 @@ public class ClientManager
 			deleteOneClientStmt = connection
 					.prepareStatement("DELETE FROM Client WHERE idClient = ?");
 			deleteAllClientsStmt = connection
-					.prepareStatement("DELETE FROM Client;");
+					.prepareStatement("DELETE FROM Client");
 			getAllClientsStmt = connection
 					.prepareStatement("SELECT idClient, seatNumber, payment, wine FROM Client");
 			countAllClientsStmt = connection

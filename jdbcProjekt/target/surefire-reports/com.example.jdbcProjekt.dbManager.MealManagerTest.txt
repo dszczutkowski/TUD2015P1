@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.example.jdbcProjekt.dbManager.MealManagerTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.664 sec <<< FAILURE!
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.667 sec <<< FAILURE!
 checkRemovingOneMeal(com.example.jdbcProjekt.dbManager.MealManagerTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException
 	at com.example.jdbcProjekt.dbManager.MealManager.removeMeals(MealManager.java:108)

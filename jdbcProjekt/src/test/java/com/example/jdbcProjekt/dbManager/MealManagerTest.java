@@ -46,7 +46,7 @@ public class MealManagerTest
 		
 		assertEquals(NAME_1, mealRetrieved.getName());
 		assertEquals(AMOUNT_1, mealRetrieved.getAmount());
-		//assertEquals(PRICE_1, mealRetrieved.getPrice());
+		assertEquals(PRICE_1, mealRetrieved.getPrice(), 0.00f);
 	}
 
 	@Test
@@ -66,7 +66,21 @@ public class MealManagerTest
 	}
 	
 	@Test
-	public void checkRemovingOneMeal() throws SQLException
+	public void checkKeyUpdate2() throws SQLException
+	{
+		Meal meal = new Meal(NAME_1, AMOUNT_1, PRICE_1);
+		
+		mealManager.removeMeals();
+		
+		clientManager.addClient(client);
+		assertEquals(1, mealManager.addMeal(meal));
+		mealManager.updateKey(meal, client);
+		
+		assertEquals(meal.getIdClient(), client.getIdClient());
+	}
+	
+	@Test
+	public void checkRemoveOneMeal() throws SQLException
 	{
 		Meal meal = new Meal();
 		mealManager.removeMeals();

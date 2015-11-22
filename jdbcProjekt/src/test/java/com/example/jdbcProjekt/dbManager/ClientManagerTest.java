@@ -26,6 +26,8 @@ public class ClientManagerTest {
 	private final static boolean WINE_3 = true;
 	
 	private final static int MIN_PAYMENT = 100;
+	private final static boolean WINE = true;
+	private final static boolean NO_WINE = false;
 	
 	@Test
 	public void checkConnection() 
@@ -69,13 +71,13 @@ public class ClientManagerTest {
 		
 		assertEquals(1, clientManager.addClient(clientToUpdate));
 		
-		clientManager.updateClients(false, MIN_PAYMENT);
+		clientManager.updateClients(WINE, MIN_PAYMENT);
 		
 		List<Client>clients = clientManager.getAllClients();
 		Client clientRetrieved = clients.get(0);
 		
-		assertTrue(clientRetrieved.getPayment()>MIN_PAYMENT);
-		assertEquals(clientRetrieved.getWine(), true);
+		assertTrue(clientRetrieved.getPayment()<MIN_PAYMENT);
+		assertEquals(clientRetrieved.getWine(), NO_WINE);
 	}
 	
 	@Test
